@@ -18,4 +18,12 @@ class CheckerTest {
         int score = checker.checkLength(inputString1, inputString2);
         assertThat(score).isEqualTo(60);
     }
+
+    @Test
+    void 글자수가두배이상차이나는경우() {
+        String inputString1 = "AB";
+        String inputString2 = "ABCE";
+        int score = checker.checkLength(inputString1, inputString2);
+        assertThat(score).isEqualTo(0);
+    }
 }
