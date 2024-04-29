@@ -29,7 +29,7 @@ class CheckerTest {
     void 부분점수를받는경우() {
         String inputString1 = "ABC";
         String inputString2 = "ABCE";
-        assertThatScoreLength(inputString1, inputString2, 0);
+        assertThatScoreLength(inputString1, inputString2, 40);
     }
 
     private void assertThatScoreLength(String inputString1, String inputString2, int expectedScore) {

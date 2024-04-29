@@ -8,11 +8,9 @@ public class Checker {
         if (length1 == length2) {
             return MAX_SCORE_LENGTH;
         }
-        if (length1 >= length2 * 2
-        || length2 >= length1 * 2) {
+        if (length1 >= length2 * 2 || length2 >= length1 * 2) {
             return 0;
         }
-        
-        return 0;
+        return (int) ((1 - (double) Math.abs(length1 - length2) / Math.min(length1, length2)) * MAX_SCORE_LENGTH);
     }
 }
